@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Book</title>
+</head>
+<body>
+  <h3>Моя книга</h3>
+  <pre id="text">Загрузка...</pre>
+
+  <script>
+    fetch("book.txt")
+      .then(r => r.text())
+      .then(data => {
+        document.getElementById("text").innerText = data;
+      });
+  </script>
+</body>
+</html>
